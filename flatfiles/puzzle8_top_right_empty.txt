@@ -34,5 +34,6 @@ rule: ((position ?t1 ?x1 ?y1) (position ?t2 ?x1 pos2)) -> (adjacent ?t1 ?t2)
 rule: ((position ?t1 ?x1 ?y1) (position ?t2 pos2 ?y1)) -> (adjacent ?t1 ?t2) 
 rule: ((position ?t1 pos2 ?y1) (position ?t2 ?x1 ?y1)) -> (adjacent ?t1 ?t2) 
 rule: ((position ?t1 ?x1 pos2) (position ?t2 ?x1 ?y1)) -> (adjacent ?t1 ?t2) 
+rule: (adjacent ?t1 ?t2) -> (adjacent ?t2 ?t1)
 
 rule: ((adjacent ?t1 empty) (position ?t1 ?x1 ?y1) (position empty ?x2 ?y2) -> (movable ?t1 ?x1 ?y1 ?x2 ?y2))
